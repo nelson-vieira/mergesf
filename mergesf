@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cp $1 $12
+git restore $1
+git merge-file $2 $1 $12 --union
+rm $1
+mv $12 $1
